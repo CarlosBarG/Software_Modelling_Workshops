@@ -14,6 +14,7 @@ Likewise, there is the Arcade_store_program folder that includes the python impl
 • As a customer I want to be able to add the games that I buy to the arcade machine, so what I can then play them later.
 
 • As a customer, I want to finalize the purchase of the arcade machine, so what I can have access to it.
+
 • As a customer, I want to be able to register my data, so what the machine is my property.
 
 • As a customer, I want the store to have a merchandising section for the store, so I can buy items that I like.
