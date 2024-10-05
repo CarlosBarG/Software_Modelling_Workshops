@@ -60,19 +60,19 @@ def main():
             option_buy_arcade = input().strip()
             if option_buy_arcade == "1":
                 price_range = input("Enter the price range (min-max): ").strip()
-                store.show_arcade_machines_by_price_range(price_range)
+                store.show_machines_by_price_range(price_range)
             elif option_buy_arcade == "2":
                 material = input("Enter the material: ").strip()
-                store.show_arcade_machines_by_material(material)
+                store.show_machines_by_material(material)
             elif option_buy_arcade == "3":
                 weight_range = input("Enter the weight range (min-max): ").strip()
-                store.show_arcade_machines_by_weight_range(weight_range)
+                store.show_machines_by_weight_range(weight_range)
             elif option_buy_arcade == "4":
                 power_consumption_range = input("Enter the power consumption range (min-max): ").strip()
-                store.show_arcade_machines_by_power_consumption_range(power_consumption_range)
+                store.show_machines_by_power_consumption_range(power_consumption_range)
             elif option_buy_arcade == "5":
                 number_of_games = input("Enter the number of games: ").strip()
-                store.show_arcade_machines_by_number_of_games(number_of_games)
+                store.show_machines_by_number_of_games(number_of_games)
             else:
                 print("Invalid option")
         elif option == "2":

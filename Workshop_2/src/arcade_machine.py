@@ -153,8 +153,12 @@ class DanceRevolutionMachine(ArcadeMachine):
         processor (str): The processor of the machine.
 
     """
-    def __init__(self, machine_code:int, machine_name: str, machine_material: str, base_price: float, controls_price: float, color: str, creation_year: str):
+    def __init__(self, machine_code, machine_name , machine_material: str, base_price: float, controls_price: float, color: str, creation_year: str):
         super().__init__(machine_code, machine_name, machine_material, creation_year, base_price, color)
+        self.machine_code = 1
+        self.machine_name = "DanceRevolution"
+        self.base_price = 5000000
+        self.machine_material = machine_material
         self.controls_price = 200000
         self.difficulties = {1: "Easy", 2: "Normal", 3: "Hard", 4: "Extreme"}
         self.arrow_cardinalities = {1: "Up", 2: "Left", 3: "Right", 4: "Down"}
@@ -163,6 +167,8 @@ class DanceRevolutionMachine(ArcadeMachine):
         self.power_consumption = 200  # watts
         self.memory = 8  # GB
         self.processor = "Quad-Core 2.5 GHz"
+        self.color = color
+        self.creation_year = 2001
 
 
 class ClassicalMachine(ArcadeMachine):
@@ -179,6 +185,12 @@ class ClassicalMachine(ArcadeMachine):
     """
     def __init__(self, machine_code: int, machine_name: str, machine_material: str, creation_year: str, base_price: float, color: str):
         super().__init__(machine_code, machine_name, machine_material, creation_year, base_price, color)
+        self.machine_code = 2
+        self.machine_name = "ClassicalMachine"
+        self.base_price = 3000000
+        self.machine_material = machine_material
+        self.creation_year = 1980
+        self.color = color
         self.dimensions = {"width": 60, "length": 80, "height": 160}
         self.weight = 70.0  # kg
         self.power_consumption = 300  # watts
@@ -215,9 +227,14 @@ class VirtualRealityMachine(ArcadeMachine):
     """
     def __init__(self, machine_code: int, machine_name: str, machine_material: str, base_price: float, creation_year: str, glasses_type: str, glasses_resolution: str, glasses_price: float, color: str):
         super().__init__(machine_code, machine_name, machine_material, creation_year, base_price, color)
-        self.glasses_type = glasses_type
-        self.glasses_resolution = glasses_resolution
-        self.glasses_price = glasses_price
+        self.machine_code = 3
+        self.machine_name = "VirtualRealityMachine"
+        self.base_price = 7000000
+        self.creation_year = 2016
+        self.color = color
+        self.glasses_type = "Vision 2"
+        self.glasses_resolution = "4K"
+        self.glasses_price = 300000
         self.dimensions = {"width": 100, "length": 100, "height": 200}
         self.weight = 7.0  # kg
         self.power_consumption = 200  # watts
@@ -234,6 +251,14 @@ class ShootingMachine(ArcadeMachine):
     """
     def __init__(self, machine_code: int, machine_name: str, machine_material: str, base_price: float, creation_year: str, toy_gun_price: float, color: str):
         super().__init__(machine_code, machine_name, machine_material, creation_year, base_price, color)
+        
+        self.machine_code = 4
+        self.machine_name = "ShootingMachine"
+        self.base_price = 4000000
+        self.creation_year = 1990
+        self.color = color
+        self.machine_material = machine_material
+    
         self.toy_gun_price = 200000
         self.dimensions = {"width": 70, "length": 120, "height": 180}
         self.weight = 60  # kg
@@ -251,7 +276,15 @@ class RacingMachine(ArcadeMachine):
     """
     def __init__(self, machine_code: int, machine_name: str, machine_material: str, base_price: float, creation_year: str, toy_steering_wheel_price: float, color: str):
         super().__init__(machine_code, machine_name, machine_material, creation_year, base_price, color)
-        self.toy_steering_wheel_price = toy_steering_wheel_price
+        
+        
+        self.machine_code = 5
+        self.machine_name = "RacingMachine"
+        self.machine_material = machine_material
+        self.color = color
+        self.base_price = 6000000
+        self.creation_year = 1995
+        self.toy_steering_wheel_price = 200000
         self.dimensions = {"width": 120, "length": 150, "height": 160}
         self.weight = 60  # kg
         self.power_consumption = 200  # watts
@@ -259,6 +292,12 @@ class RacingMachine(ArcadeMachine):
         self.processor = "Quad-Core 3.0 GHz"
 
 class FactoryArcadeMachine:
+
+    """
+    This class represents a factory of arcade machines.
+    Attributes:
+        machine_name (str): The name of the arcade machine.
+    """
     def __init__(self, machine_name: str):
         def create_machine(self, machine_name: str):
             if machine_name == "DanceRevolution":

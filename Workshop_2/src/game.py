@@ -36,7 +36,7 @@ class Game:
         
         
     """
-    def __init__(self,code:int,  name: str, year_of_release: str, base_price: float, story_telling_creator: str, graphics_creator: str, category:str, is_hd :bool= False):
+    def __init__(self,code:int,  name: str, year_of_release: str, base_price: float, story_telling_creator: str, graphics_creator: str, category:str, is_hd :bool):
 
         self.code = code
         self.name = name
@@ -48,12 +48,18 @@ class Game:
         self.is_hd = is_hd
 
     def get_code(self):
+        """
+        This method returns the code of the game.
+
+        """
         return self.code
 
     
 
     def get_price(self):
-
+        """
+        This method returns the price of the game.
+        """
         if self.is_hd:
             self.base_price = self.base_price * 0.1
             return self.base_price
@@ -73,9 +79,17 @@ class DanceRevolutionGame(Game):
 
     def __init__(self, code:int, name: str, year_of_release: str, base_price: float, story_telling_creator: str, graphics_creator: str, category:str, difficulty: str, number_of_players: int):
         super().__init__(code, name, year_of_release, base_price, story_telling_creator, graphics_creator, category, is_hd = True)
+        self.code= 1
+        self.name = "Dance Revolution"
+        self.year_of_release = "2001"
+        self.base_price = 170000
+        self.story_telling_creator = "Konami"
+        self.graphics_creator = "Konami"
+        self.category = "Dance"
         
-        self.difficulty = difficulty
-        self.number_of_players = number_of_players
+        self.difficulty = "Hard"
+        self.number_of_players = 2
+    
 
         def show_game_details(self):
             """
@@ -90,9 +104,17 @@ class DancingStageGame (Game):
     def __init__(self, code:int, name: str, year_of_release: str, base_price: float, story_telling_creator: str, graphics_creator: str, category:str, difficulty: str, number_of_players: int):
         super().__init__(code, name, year_of_release, base_price, story_telling_creator, graphics_creator, category, is_hd = False)
         
-        self.difficulty = difficulty
-        self.number_of_players = number_of_players
-
+        self.code= 2
+        self.name = "Dancing Stage"
+        self.year_of_release = "1998"
+        self.base_price = 170000
+        self.story_telling_creator = "Konami"
+        self.graphics_creator = "Konami"
+        self.category = "Dance"
+        
+        self.difficulty = "Normal"
+        self.number_of_players = 2
+       
         def show_game_details(self):        
             """
             Show the attributes of the Dancing Stage game, including the name, year of release, price,  difficulty, and number of players.
@@ -105,8 +127,18 @@ class SnakeGame(Game):
     def __init__(self, code:int, name: str, year_of_release: str, base_price: float, story_telling_creator: str, graphics_creator: str, category:str, difficulty: str, number_of_players: int):
         super().__init__(code, name, year_of_release, base_price, story_telling_creator, graphics_creator, category, is_hd = False)
         
-        self.difficulty = difficulty
-        self.number_of_players = number_of_players
+        self.code= 3
+        self.name = "Snake"
+        self.year_of_release = "1997"
+        self.base_price = 170000
+        self.story_telling_creator ="Atari"
+        self.graphics_creator = "Atari"
+        self.category = "Arcade"
+        
+        self.difficulty = "Normal"
+        self.number_of_players = 2
+       
+
         def show_game_details(self):
             """
             Show the attributes of the Snake game, including the name, year of release, price,  difficulty, and number of players.
@@ -118,8 +150,19 @@ class TetrisEffectGame(Game):
     This class represents a Tetris Effect game from the Arcade store."""
     def __init__(self, code: int, name: str, year_of_release: str, base_price: float, story_telling_creator: str, graphics_creator: str, category: str,difficulty:str,  number_of_players: int):
         super().__init__(code, name, year_of_release, base_price, story_telling_creator, graphics_creator, category, is_hd=False)
-        self.difficulty = difficulty
-        self.number_of_players = number_of_players
+        
+        
+        self.code= 4
+        self.name = "Tetris Effect"
+        self.year_of_release = "2018"
+        self.base_price = 170000
+        self.story_telling_creator = "Tetsuya Mizuguchi"
+        self.graphics_creator = "Tetsuya Mizuguchi"
+        self.category = "VirtualReality"
+        
+        self.difficulty = "Normal"
+        self.number_of_players = 1
+
         def show_game_details(self):
             """
             Show the attributes of the Tetris Effect game, including the name, year of release, price,  difficulty, and number of players.
@@ -131,8 +174,19 @@ class NeedForSpeedGame(Game):
     This class represents a Need For Speed game from the Arcade store."""
     def __init__(self, code: int, name: str, year_of_release: str, base_price: float, story_telling_creator: str, graphics_creator: str, category: str,difficulty:str,  number_of_players: int, is_hd= False):
         super().__init__(code, name, year_of_release, base_price, story_telling_creator, graphics_creator, category, is_hd= True)
-        self.difficulty = difficulty
-        self.number_of_players = number_of_players
+        
+        
+        self.code= 5
+        self.name = "Need For Speed"
+        self.year_of_release = "2015"
+        self.base_price = 130000
+        self.story_telling_creator = "Electronic Arts"
+        self.graphics_creator = "Electronic Arts"
+        self.category = "Racing"
+        
+        self.difficulty = "Normal"
+        self.number_of_players = 1
+
         def show_game_details(self):
             """
             Show the attributes of the Tetris Effect game, including the name, year of release, price,  difficulty, and number of players.
@@ -145,8 +199,16 @@ class GhostSquadGame(Game):
     
     def __init__(self, code: int, name: str, year_of_release: str, base_price: float, story_telling_creator: str, graphics_creator: str, category: str,difficulty:str,  number_of_players: int):
         super().__init__(code, name, year_of_release, base_price, story_telling_creator, graphics_creator, category, is_hd=False)
-        self.difficulty = difficulty
-        self.number_of_players = number_of_players
+        self.code= 6
+        self.name = "Ghost Squad"
+        self.year_of_release = "2004"
+        self.base_price = 120000
+        self.story_telling_creator = "Sega"
+        self.graphics_creator = "Sega"
+        self.category = "Shooter"
+        
+        self.difficulty = "Normal"
+        self.number_of_players = 2
 
         def show_game_details(self):
             """
